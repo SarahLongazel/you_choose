@@ -31,10 +31,11 @@ def which_story():
 
 which_story()
 
-# #get the number choice from user and convert varible to int
-# def convert_choice(choice):
-#     num_choice = int(choice)
-#     return num_choice 
+def get_action_choice():
+    num_choice = input("Type the number of what you'd like to do: ")
+    num_choice = int(num_choice)
+    return num_choice
+
 
 # #run the storyline choices based on returned num_choice variable
 # def print_storyline():
