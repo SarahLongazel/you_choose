@@ -1,7 +1,10 @@
 
-#story lines for stories
-house_list = [
-                "You are walking in the woods and see a haunted house. Do you...? \n 1. Go in. \n 6. Run to the beach."
+def which_story():
+    story_choice = input("Would you like a story about \n 1. A haunted house\n 2. Unicorns? ")
+    story_choice = int(story_choice)
+    if story_choice == 1:
+        story_list = [
+                "You are walking in the woods and see a haunted house. Do you...? \n 1. Go in. \n 6. Run to the beach.",
                 "Entering the house you see... \n 2. Scarecrows \n 3. Monsters",
                 "You fight the scarecrows in the house and then the scarecrows get thirsty. \n They drink strawberry-pineanple-blueberry juice and it turns them into broccoli.\n The End.",
                 "You fight the monsters and they run away. You get hungry and make pizza. The pizza in magic and it makes you \n 4. Turn smaller \n 5. Ginormous.",
@@ -11,7 +14,9 @@ house_list = [
                 "You fight the sharks and they swim away. \n The End.",
                 "On the motorbike you go buy groceries. You buy grapes and eat them and you turn into grapes. Then people try to eat you \n and then they spit you out and say, 'Eew, human!' Then you turn back into a human. \n The End." 
                 ]
-unicorn_list = [
+
+    elif story_choice == 2:
+        story_list = [
                 "You're walking in an enchanted forest and you see a unicorn surrounded by fire. To save the unicorn, do you...?\n 1. Jump over the fire. \n 6. Put the fire out.",
                 "You jump over the fire and ride the unicorn out of the fire. You get the unicorn water from \n 2. The Lake. \n 3. A bottle of water.",
                 "You and the unicorn fly to the lake and the unicorn gets water because it was hard for the unicorn to breath in the fire. \n The End.",
@@ -22,19 +27,24 @@ unicorn_list = [
                 "The unicorn turns into Sprite and you drink it. You grow a horn and a tail. \n The End.",
                 "The unicorn turns into a person and you find two other unicorns and they get mad at the person unicorn. \n They start a war with lego people. \n The End."
                 ]
+    print(story_list[0])
 
-while True:
+which_story()
 
-def which_story():
+# #get the number choice from user and convert varible to int
+# def convert_choice(choice):
+#     num_choice = int(choice)
+#     return num_choice 
 
-#get the number choice from user and convert varible to int
-def get_choice():
-    choice = int(input("Choose the number of what you want to do: "))
-    return choice 
+# #run the storyline choices based on returned num_choice variable
+# def print_storyline():
+#     print()
 
-#run the storyline choices based on returned choice variable
-def print_storyline():
-    print()
+# while num_choice > 9:
+#     choice = input("Choose the number of what you want to do: ")
 
-def check_continue():
-
+#     if num_choice == 9:
+#         break
+#     else:
+#         convert_choice()
+#         continue
